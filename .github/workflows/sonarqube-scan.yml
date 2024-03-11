@@ -10,7 +10,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven cloud
+    - name: Build with Maven and Sonar
       run: mvn -B verify sonar:sonar -Dsonar.projectKey=wisanggeni123_wisanggeniproject -Dsonar.organization=WisanggeniProject -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
